@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "name": "Arm",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "Inc",
+                "Drivers/STM32F4xx_HAL_Driver/Inc",
+                "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "Drivers/CMSIS/Include",
+                "Drivers/CMSIS/Include",
+                "${workspaceFolder}/../gcc-arm-none-eabi-9-2020-q2-update/arm-none-eabi/include"
+            ],
+            "defines": [
+                "__GNUC__",
+                "USE_HAL_DRIVER",
+                "STM32F429xx",
+                "GCC_PATH=${workspaceFolder}/../gcc-arm-none-eabi-9-2020-q2-update/bin"
+            ],
+            "compilerPath": "${workspaceFolder}/../gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

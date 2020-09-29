@@ -1,0 +1,36 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ARM Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/light_led.elf",
+            "miDebuggerPath": "${workspaceFolder}/../gcc-arm-none-eabi-9-2020-q2-update/bin/arm-none-eabi-gdb",
+            "targetArchitecture": "arm",
+            "cwd": "${workspaceFolder}",
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "text": "exec-file '~/stm_proj/light_led/build/light_led.elf'"
+                },
+                {
+                    "text": "target remote localhost:2331"
+                },
+                {
+                    "text": "monitor reset"
+                },
+                {
+                    "text": "monitor halt"
+                },
+                {
+                    "text": "load"
+                }
+            ]
+        }
+    ]
+}
